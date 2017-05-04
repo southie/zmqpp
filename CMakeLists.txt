@@ -277,7 +277,6 @@ include(CMakePackageConfigHelpers)
 
 export(EXPORT zmqppTargets
   FILE "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}/${PROJECT_NAME}Targets.cmake"
-  NAMESPACE Upstream::
 )
 file(WRITE ${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}/zmqppConfig.cmake "include(\"\${CMAKE_CURRENT_LIST_DIR}/${PROJECT_NAME}Targets.cmake\")" )
 
@@ -286,8 +285,6 @@ set(ConfigPackageLocation share/cmake/${PROJECT_NAME})
 install(EXPORT zmqppTargets
   FILE
     ${PROJECT_NAME}Targets.cmake
-  NAMESPACE
-    Upstream::
   DESTINATION
     ${ConfigPackageLocation}
 )
