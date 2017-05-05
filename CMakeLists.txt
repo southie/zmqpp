@@ -275,7 +275,7 @@ install(FILES
 		
 include(CMakePackageConfigHelpers)
 
-export(EXPORT zmqppTargets
+export(TARGETS ${zmppTargets}
   FILE "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}/${PROJECT_NAME}Targets.cmake"
 )
 file(WRITE ${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}/zmqppConfig.cmake "include(\"\${CMAKE_CURRENT_LIST_DIR}/${PROJECT_NAME}Targets.cmake\")" )
